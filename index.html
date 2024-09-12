@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum Ticketing System with Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#ticket-section">Buy Tickets</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to the Museum</h1>
+        <p>Explore our latest exhibitions and buy your tickets online.</p>
+        <a href="#ticket-section" class="btn">Buy Tickets Now</a>
+    </section>
+
+    <!-- Featured Exhibit Section -->
+    <section class="featured">
+        <h2>Featured Exhibit: The Wonders of Ancient Egypt</h2>
+        <p>Discover the mysteries of ancient civilizations with our new interactive exhibit.</p>
+        <a href="#ticket-section" class="btn">Explore & Book Tickets</a>
+    </section>
+
+    <!-- Ticket Booking Section -->
+    <section id="ticket-section">
+        <h2>Book Your Tickets</h2>
+        <form>
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" name="date">
+            
+            <label for="exhibit">Select Exhibit:</label>
+            <select id="exhibit" name="exhibit">
+                <option value="egypt">Wonders of India</option>
+                <option value="modern">Modern Art Exhibition</option>
+                <option value="dinosaurs">Dinosaurs and Prehistoric Life</option>
+            </select>
+            
+            <label for="tickets">Select Ticket Type:</label>
+            <select id="tickets" name="tickets">
+                <option value="adult">Adult</option>
+                <option value="child">Child</option>
+                <option value="senior">Senior</option>
+            </select>
+
+            <a href="checkout.html" class="btn">Proceed to Checkout</a>
+        </form>
+    </section>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <div class="chatbot-header">
+            <h4>Ask our Assistant</h4>
+            <button id="chatbot-close" onclick="toggleChatbot()">×</button>
+        </div>
+        <div class="chatbot-body">
+            <div id="chatbot-messages">
+                <p class="chatbot-msg">Hi! How can I help you today?</p>
+            </div>
+            <input type="text" id="chatbot-input" placeholder="Type your message...">
+            <button id="chatbot-send" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <!-- Chatbot Icon -->
+    <div class="chatbot-icon" onclick="toggleChatbot()">
+        <img src="chatbot-icon.png" alt="Chatbot Icon">
+    </div>
+
+    <!-- Footer -->
+    
+
+    <script src="chatbot.js"></script>
+</body>
+</html>
